@@ -1,11 +1,11 @@
 import React from "react";
-import { ThemeChanger } from "./ui/theme.changer";
+import { ThemeChanger } from "components/module/theme-changer/theme.changer";
 import { Logotype } from "components/ui/logotype/logotype";
 
 export const Header: React.FC = () => {
   return (
     <header className="mx-4 mt-3">
-      <div className="bg-gradient-to-r from-slate-700 to-gray-600 rounded-2xl shadow-lg transform transition-all duration-700 ease-out animate-slide-down">
+      <div className="bg-gradient-to-r from-[var(--bg-secondary-from)] to-[var(--bg-secondary-to)] rounded-2xl shadow-lg transform transition-all duration-700 ease-out animate-slide-down">
         <div className="container mx-auto px-5 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">

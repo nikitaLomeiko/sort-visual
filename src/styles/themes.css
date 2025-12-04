@@ -1,0 +1,65 @@
+[data-theme="light"] {
+  --bg-primary-from: #ffffff;
+  --bg-primary-to: #f8fafc;
+
+  --bg-secondary-from: #1a73e8;
+  --bg-secondary-to: #0d62d9;
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #e1e1e1;
+
+  --bg-accent-primary: #1a73e8;
+  --bg-accent-secondary: #0d62d9;
+}
+
+[data-theme="dark"] {
+  --bg-primary-from: oklch(21% 0.034 264.665);
+  --bg-primary-to: oklch(27.8% 0.033 256.848);
+
+  --bg-secondary-from: oklch(37.2% 0.044 257.287);
+  --bg-secondary-to: oklch(44.6% 0.03 256.802);
+
+  --text-primary: #ffffff;
+  --text-secondary: #b1b1b1;
+
+  --bg-accent-primary: #e2e8f0;
+  --bg-accent-secondary: #e2e8f0;
+}
+
+/* Существующие классы */
+.bg-primary-from {
+  background-color: var(--bg-primary-from);
+}
+
+.bg-primary-to {
+  background-color: var(--bg-primary-to);
+}
+
+.bg-secondary-from {
+  background-color: var(--bg-secondary-from);
+}
+
+.bg-secondary-to {
+  background-color: var(--bg-secondary-to);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-accent-primary {
+  background-color: var(--bg-accent-primary);
+}
+
+.bg-accent-secondary {
+  background-color: var(--bg-accent-secondary);
+}
+
+/* Инвертированный текст */
+.text-invert {
+  color: var(--text-invert);
+}
