@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeChanger } from "components/module/theme-changer/theme.changer";
+import { ThemeChanger } from "components/common/theme-changer/theme.changer";
 import { Logotype } from "components/ui/logotype/logotype";
 
 export const Header: React.FC = () => {

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { themeList } from "./config/theme.config";
+import { IReturnThemeManagment } from "./types/return.type";
 
-export const useThemeManagment = () => {
+export const useThemeManagment = (): IReturnThemeManagment => {
   const [currentTheme, setCurrentTheme] = useState<string>(getSavedTheme());
+
   const applyTheme = (themeName: string) => {
     const theme = themeList.find((t) => t === themeName);
     const root = document.documentElement;
@@ -25,7 +27,6 @@ export const useThemeManagment = () => {
   function getCurrentTheme() {
     const current =
       document.documentElement.getAttribute("data-theme") || "light";
-    setCurrentTheme(current);
 
     return current;
   }
@@ -47,12 +48,14 @@ export const useThemeManagment = () => {
       const oppositeThemes = themeList.filter((t) => t !== currentThemeData);
       if (oppositeThemes.length > 0) {
         applyTheme(oppositeThemes[0]);
+        setCurrentTheme(oppositeThemes[0]);
         return oppositeThemes[0];
       }
     }
 
     const newTheme = currentTheme === "light" ? "dark" : "light";
     applyTheme(newTheme);
+    setCurrentTheme(newTheme);
     return newTheme;
   }
 

@@ -1,8 +1,8 @@
-import { useThemeManagment } from "hooks/theme/use.theme.managment";
+import { useTheme } from "components/providers/theme-provider/theme.provider";
 import React from "react";
 
 export const ThemeChanger: React.FC = () => {
-  const { toggleDarkLight, currentTheme } = useThemeManagment();
+  const { toggleDarkLight, currentTheme } = useTheme();
 
   return (
     <button
