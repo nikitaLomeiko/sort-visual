@@ -12,7 +12,7 @@ export const CodeWrapper: React.FC<IProps> = ({ children, title }) => {
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <div className="text-sm text-[var(--text-primary)] font-medium truncate px-4">
+        <div className="text-sm text-gray-100 font-medium truncate px-4">
           {title}
         </div>
         <div className="w-12"></div>
