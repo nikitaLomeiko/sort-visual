@@ -1,5 +1,5 @@
 import { useThemeManagment } from "hooks/theme/use.theme.managment";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export const ThemeChanger: React.FC = () => {
   const { toggleDarkLight, currentTheme } = useThemeManagment();
