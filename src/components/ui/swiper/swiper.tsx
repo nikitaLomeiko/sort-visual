@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -16,9 +16,20 @@ export const ReactSwiper: React.FC<FullScreenSliderProps> = ({ children }) => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
 
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiperInstance = swiperRef.current.swiper;
+
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  }, []);
+
   return (
     <div className="relative w-full">
-      <div className="absolute w-full z-90">
+      <div className="w-full z-90">
         <Swiper
           ref={swiperRef}
           modules={[Navigation, Pagination]}
@@ -33,14 +44,6 @@ export const ReactSwiper: React.FC<FullScreenSliderProps> = ({ children }) => {
             type: "bullets",
           }}
           className="h-full w-full"
-          onInit={(swiper) => {
-            // @ts-ignore
-            swiper.params.navigation.prevEl = prevRef.current;
-            // @ts-ignore
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
         >
           {React.Children.map(children, (child, index) => (
             <SwiperSlide key={index} className="slide-fade-in">
