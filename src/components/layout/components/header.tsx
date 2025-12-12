@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <Logotype />
-              <div>
+              <div className="sm:block hidden">
                 <h1 className="text-xl font-bold text-white">Sort Visual</h1>
                 <p className="text-gray-200 text-sm">Визуализация сортировок</p>
               </div>

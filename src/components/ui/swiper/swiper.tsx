@@ -47,14 +47,14 @@ export const ReactSwiper: React.FC<FullScreenSliderProps> = ({ children }) => {
         >
           {React.Children.map(children, (child, index) => (
             <SwiperSlide key={index} className="slide-fade-in">
-              <div className="h-full w-full px-20 pb-20">{child}</div>
+              <div className="h-full w-full sm:px-20 px-5 pb-20">{child}</div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         <button
           ref={prevRef}
-          className="slide-nav-btn slide-nav-left bg-[var(--text-primary)]/20"
+          className="slide-nav-btn slide-nav-left bg-[var(--text-primary)]/20 sm:flex hidden"
           aria-label="Предыдущий слайд"
         >
           <ChevronLeft className="nav-icon" />
@@ -62,7 +62,7 @@ export const ReactSwiper: React.FC<FullScreenSliderProps> = ({ children }) => {
 
         <button
           ref={nextRef}
-          className="slide-nav-btn slide-nav-right bg-[var(--text-primary)]/20"
+          className="slide-nav-btn slide-nav-right bg-[var(--text-primary)]/20 sm:flex hidden"
           aria-label="Следующий слайд"
         >
           <ChevronRight className="nav-icon" />

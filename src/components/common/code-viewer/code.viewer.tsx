@@ -29,22 +29,23 @@ export const CodeViewer: React.FC<IProps> = (props) => {
 
   return (
     <CodeWrapper title={title}>
-      <SyntaxHighlighter
-        language={language}
-        style={currentTheme === "light" ? oneLight : oneDark}
-        showLineNumbers={showLineNumbers}
-        customStyle={{
-          margin: 0,
-          padding: "1.5rem",
-          fontSize: "14px",
-          minHeight: "200px",
-          borderRadius: 0,
-        }}
-      >
-        {code}
-      </SyntaxHighlighter>
+      <div className="sm:text-sm text-[8px]">
+        <SyntaxHighlighter
+          language={language}
+          style={currentTheme === "light" ? oneLight : oneDark}
+          showLineNumbers={showLineNumbers}
+          customStyle={{
+            margin: 0,
+            padding: "1.5rem",
+            minHeight: "200px",
+            borderRadius: 0,
+          }}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
 
-      <div className="absolute top-4 right-4 flex flex-row center gap-2 opacity-75">
+      <div className="absolute top-4 right-4 flex flex-row center gap-2 opacity-75 sm:text-sm text-xs">
         <ButtonRun handleRun={() => null} />
         <ButtonInfo handleInfo={() => null} />
         <ButtonCopied code={code} />
