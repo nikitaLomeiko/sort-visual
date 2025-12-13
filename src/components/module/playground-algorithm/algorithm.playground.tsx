@@ -20,9 +20,7 @@ export const AlgorithmPlayground: React.FC<IAlgorithmItem> = (props) => {
           />
           <div className="inline-flex items-start gap-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
             <Info className="h-4 w-4 text-blue-500 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700 dark:text-gray-300 text-sm">
-              {info}
-            </span>
+            <span className="text-[var(--text-primary)] text-sm">{info}</span>
           </div>
         </div>
       )}

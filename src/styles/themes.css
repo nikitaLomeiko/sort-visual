@@ -8,8 +8,10 @@
   --text-primary: #2f2f2f;
   --text-secondary: #575757;
 
-  --bg-accent-primary: #1a73e8;
-  --bg-accent-secondary: #0d62d9;
+  --bg-accent-primary-from: oklch(63.244% 0.17481 137.99);
+  --bg-accent-primary-to: oklch(74.276% 0.22068 138.592);
+  --bg-accent-secondary-from: #e4be15;
+  --bg-accent-secondary-to: #ffdd46;
 }
 
 [data-theme="dark"] {
@@ -22,8 +24,10 @@
   --text-primary: #ffffff;
   --text-secondary: #b1b1b1;
 
-  --bg-accent-primary: #e2e8f0;
-  --bg-accent-secondary: #e2e8f0;
+  --bg-accent-primary-from: oklch(62.3% 0.214 259.815);
+  --bg-accent-primary-to: oklch(70.7% 0.165 254.624);
+  --bg-accent-secondary-from: #e4be15;
+  --bg-accent-secondary-to: #ffdd46;
 }
 
 /* Существующие классы */

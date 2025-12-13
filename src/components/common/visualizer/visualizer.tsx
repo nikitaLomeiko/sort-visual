@@ -41,8 +41,8 @@ export const VisualizeSorting: React.FC<IProps> = memo((props) => {
             key={index}
             className={`flex-1 min-w-[8px] rounded-t-lg transition-all duration-300 ease-out ${
               activeIndices.includes(index)
-                ? "bg-gradient-to-t from-yellow-400 to-yellow-300"
-                : "bg-gradient-to-t from-blue-500 to-blue-400"
+                ? "bg-gradient-to-t from-[var(--bg-accent-secondary-from)] to-[var(--bg-accent-secondary-to)]"
+                : "bg-gradient-to-t from-[var(--bg-accent-primary-from)] to-[var(--bg-accent-primary-to)]"
             }`}
             style={{
               height: `${value}%`,
