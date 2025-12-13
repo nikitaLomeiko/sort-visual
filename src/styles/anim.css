@@ -218,3 +218,25 @@
 .h-full.w-full.px-20.pb-20 img {
   animation: scaleIn 0.7s ease-out 0.5s both;
 }
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.finger-animation {
+  animation: swipe 2s ease-in-out infinite;
+}
