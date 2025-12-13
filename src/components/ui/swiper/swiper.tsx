@@ -28,8 +28,8 @@ export const ReactSwiper: React.FC<FullScreenSliderProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative w-full">
-      <div className="w-full z-90">
+    <div className="relative w-full flex">
+      <div className="w-full z-90 flex">
         <Swiper
           ref={swiperRef}
           modules={[Navigation, Pagination]}

@@ -8,13 +8,13 @@ import { ButtonCopied } from "./components/button.copied";
 import { CodeWrapper } from "./components/code.wrapper";
 import { ButtonRun } from "./components/button.run";
 import { useTheme } from "components/providers/theme-provider/theme.provider";
-import { ButtonInfo } from "./components/button.info";
 
 interface IProps {
   code: string;
   title: string;
   showLineNumbers?: boolean;
   language?: string;
+  toggleRun: () => void;
 }
 
 export const CodeViewer: React.FC<IProps> = (props) => {
@@ -23,6 +23,7 @@ export const CodeViewer: React.FC<IProps> = (props) => {
     title,
     showLineNumbers = true,
     language = "javascript",
+    toggleRun,
   } = props;
 
   const { currentTheme } = useTheme();
@@ -46,8 +47,7 @@ export const CodeViewer: React.FC<IProps> = (props) => {
       </div>
 
       <div className="absolute top-4 right-4 flex flex-row center gap-2 opacity-75 sm:text-sm text-xs">
-        <ButtonRun handleRun={() => null} />
-        <ButtonInfo handleInfo={() => null} />
+        <ButtonRun toggleRun={toggleRun} />
         <ButtonCopied code={code} />
       </div>
     </CodeWrapper>

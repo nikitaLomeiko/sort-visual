@@ -16,11 +16,12 @@
 
     "baseUrl": "src",
     "paths": {
+      "data/*": ["data/*"],
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
       "hooks/*": ["hooks/*"],
       "utils/*": ["utils/*"],
-      "styles/*": ["styles/*"],
+      "styles/*": ["styles/*"]
     },
 
     /* Linting */

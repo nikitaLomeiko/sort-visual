@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
+      data: "/src/data",
       assets: "/src/assets",
       components: "/src/components",
       hooks: "/src/hooks",
