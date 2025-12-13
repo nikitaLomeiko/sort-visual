@@ -14,4 +14,18 @@ export default defineConfig({
       styles: "/src/styles",
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          swiper: ["swiper"],
+          "syntax-highlighter": ["react-syntax-highlighter"],
+          icons: ["lucide-react"],
+          "react-vendor": ["react", "react-dom"],
+          utils: ["react-copy-to-clipboard"],
+        },
+      },
+    },
+  },
 });

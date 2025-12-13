@@ -21,6 +21,7 @@ export const useVisualizer = ({
   const updateElementState = useCallback(
     (indices: number[], state: "active" | "sorted" | "default") => {
       setActiveIndices(indices);
+      console.log(state);
     },
     []
   );
